@@ -1,0 +1,22 @@
+{
+  "name": "voltagent-agent-skills",
+  "version": "1.0.0",
+  "author": {
+    "name": "VoltAgent",
+    "email": "info@voltagent.dev"
+  },
+  "plugins": [
+    {
+      "name": "voltagent-skills",
+      "description": "Skills for building AI applications with VoltAgent: project setup, best practices, core reference, and embedded docs lookup.",
+      "skills": [
+        "./skills/create-voltagent",
+        "./skills/voltagent-best-practices",
+        "./skills/voltagent-core-reference",
+        "./skills/voltagent-embedded-docs-lookup"
+      ],
+      "source": "./",
+      "strict": false
+    }
+  ]
+}
