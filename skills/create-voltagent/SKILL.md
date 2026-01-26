@@ -6,7 +6,7 @@ license: MIT
 metadata:
   author: VoltAgent
   version: "1.0.0"
-  repository: https://github.com/voltagent/voltagent-skills
+  repository: https://github.com/VoltAgent/skills
 ---
 
 # Create VoltAgent Skill

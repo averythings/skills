@@ -7,7 +7,7 @@ Official agent skills for coding agents working with the VoltAgent framework.
 If your agent supports add-skill:
 
 ```bash
-npx add-skill voltagent/voltagent-skills
+npx add-skill VoltAgent/skills
 ```
 
 ## Skill List
@@ -20,7 +20,7 @@ npx add-skill voltagent/voltagent-skills
 ## Manual Install
 
 ```bash
-git clone https://github.com/voltagent/voltagent-skills.git
+git clone https://github.com/VoltAgent/skills.git
 ```
 
 Then configure your coding agent to load skills from the cloned directory.
