@@ -7,7 +7,7 @@ Official agent skills for coding agents working with the VoltAgent framework.
 If your agent supports add-skill:
 
 ```bash
-npx add-skill VoltAgent/skills
+npx skills add VoltAgent/skills
 ```
 
 ## Skill List
