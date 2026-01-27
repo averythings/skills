@@ -15,7 +15,7 @@ npx add-skill VoltAgent/skills
 - create-voltagent: Project setup guide with CLI and manual steps.
 - voltagent-best-practices: Architecture and usage patterns for agents, workflows, memory, and servers.
 - voltagent-core-reference: Reference for the VoltAgent class options and lifecycle methods.
-- voltagent-embedded-docs-lookup: Lookup embedded docs from @voltagent/docs-mcp for version-matched documentation.
+- voltagent-docs-bundle: Lookup embedded docs from @voltagent/core/docs for version-matched documentation.
 
 ## Manual Install
 

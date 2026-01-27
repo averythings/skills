@@ -13,7 +13,7 @@
         "./skills/create-voltagent",
         "./skills/voltagent-best-practices",
         "./skills/voltagent-core-reference",
-        "./skills/voltagent-embedded-docs-lookup"
+        "./skills/voltagent-docs-bundle"
       ],
       "source": "./",
       "strict": false

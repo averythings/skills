@@ -1,5 +1,5 @@
 ---
-name: voltagent-embedded-docs-lookup
+name: voltagent-docs-bundle
 # prettier-ignore
 description: Look up VoltAgent documentation embedded in node_modules/@voltagent/core/docs for version-matched docs. Use for API signatures, guides, and examples.
 license: MIT
