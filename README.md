@@ -16,6 +16,7 @@ npx skills add VoltAgent/skills
 - voltagent-best-practices: Architecture and usage patterns for agents, workflows, memory, and servers.
 - voltagent-core-reference: Reference for the VoltAgent class options and lifecycle methods.
 - voltagent-docs-bundle: Lookup embedded docs from @voltagent/core/docs for version-matched documentation.
+- ontology: Typed knowledge graph for structured agent memory and composable skills (entity CRUD, relations, constraint validation). Sourced from ClawHub (`@oswalpalash/ontology` v1.0.4, MIT-0). Requires Python 3 at runtime; no additional install step.
 
 ## Manual Install
 
