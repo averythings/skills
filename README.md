@@ -16,6 +16,10 @@ npx skills add VoltAgent/skills
 - voltagent-best-practices: Architecture and usage patterns for agents, workflows, memory, and servers.
 - voltagent-core-reference: Reference for the VoltAgent class options and lifecycle methods.
 - voltagent-docs-bundle: Lookup embedded docs from @voltagent/core/docs for version-matched documentation.
+- indie-launch-checklist: 30-minute pre-ship technical readiness checklist for solo builders.
+- llm-cost-guardrail: Runtime cost caps, per-user budgets, model-tier routing, and kill switch for LLM endpoints.
+
+See [`GAP_ANALYSIS.md`](./GAP_ANALYSIS.md) for the reasoning behind the indie-focused skills.
 - ontology: Typed knowledge graph for structured agent memory and composable skills (entity CRUD, relations, constraint validation). Sourced from ClawHub (`@oswalpalash/ontology` v1.0.4, MIT-0). Requires Python 3 at runtime; no additional install step.
 
 ## Manual Install
