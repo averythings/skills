@@ -1,0 +1,63 @@
+# Starter ontology schema.
+#
+# Optional — the ontology skill auto-creates memory/ontology/graph.jsonl on
+# first write, and this schema file is only consulted when it exists.
+#
+# Mirrors the example in skills/ontology/SKILL.md and uses only fields the
+# bundled scripts/ontology.py validator supports:
+#   types.<Type>.required             (list of required properties)
+#   types.<Type>.forbidden_properties (list of properties that must not be set)
+#   types.<Type>.<field>_enum         (allowed values for <field>)
+#   relations.<rel>.from_types        (allowed source entity types)
+#   relations.<rel>.to_types          (allowed target entity types)
+#   relations.<rel>.cardinality       (one_to_one | one_to_many | many_to_one | many_to_many)
+#   relations.<rel>.acyclic           (bool; enforces no cycles)
+#   constraints                       (list; Event end>=start and relation acyclic are enforced)
+#
+# Extend with `python3 scripts/ontology.py schema-append` — it merges additively.
+
+types:
+  Person:
+    required: [name]
+
+  Project:
+    required: [name, status]
+    status_enum: [planning, active, paused, completed, archived]
+
+  Task:
+    required: [title, status]
+    status_enum: [open, in_progress, blocked, done, cancelled]
+    priority_enum: [low, medium, high, urgent]
+
+  Event:
+    required: [title, start]
+
+  Credential:
+    required: [service, secret_ref]
+    forbidden_properties: [password, secret, token, key, api_key]
+
+relations:
+  has_owner:
+    from_types: [Project, Task]
+    to_types: [Person]
+    cardinality: many_to_one
+
+  has_task:
+    from_types: [Project]
+    to_types: [Task]
+    cardinality: one_to_many
+
+  blocks:
+    from_types: [Task]
+    to_types: [Task]
+    cardinality: many_to_many
+    acyclic: true
+
+constraints:
+  - type: Event
+    rule: "if end exists: end >= start"
+    message: "Event end time must be after start time"
+
+  - relation: blocks
+    rule: acyclic
+    message: "Circular task dependencies are not allowed"
